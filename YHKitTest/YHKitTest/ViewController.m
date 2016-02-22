@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, self.view.frame.size.width, 40)];
     label.font = [UIFont systemFontOfSize:16];
     label.text = @"王亚辉是个好人";
     label.textColor = red_color;
