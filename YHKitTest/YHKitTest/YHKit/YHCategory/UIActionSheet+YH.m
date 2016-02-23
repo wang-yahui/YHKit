@@ -34,9 +34,13 @@ static CancelBlock   _cancelBlock;
 
 + (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == [actionSheet cancelButtonIndex]) {
-        _cancelBlock();
+        if (_cancelBlock) {
+            _cancelBlock();
+        }
     } else {
-        _dismissBlock((int)buttonIndex - 1);
+        if (_dismissBlock) {
+            _dismissBlock((int)buttonIndex - 1);
+        }
     }
 }
 

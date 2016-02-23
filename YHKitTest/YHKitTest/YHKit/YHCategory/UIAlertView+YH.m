@@ -42,18 +42,24 @@ static ConfirmBlock _confirmBlock;
     [self showAlertViewWithTitle:title
                          message:message
                cancelButtonTitle:cancelButtonTitle
-               otherButtonTitles:@[otherButtonTitle]
+               otherButtonTitles:otherButtonTitle? @[otherButtonTitle]: nil
                        onDismiss:^(int buttonIndex) {
-                           confirmed();
+                           if (confirmed) {
+                               confirmed();
+                           }
                        }
                         onCancel:cancelled];
 }
 
 + (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == [alertView cancelButtonIndex]) {
-        _cancelBlock();
+        if (_cancelBlock) {
+            _cancelBlock();
+        }
     } else {
-        _dismissBlock((int)buttonIndex - 1);
+        if (_dismissBlock) {
+            _dismissBlock((int)buttonIndex - 1);
+        }
     }
 }
 
