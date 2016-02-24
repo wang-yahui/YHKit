@@ -50,8 +50,7 @@
 /**
  *  string的宽度
  */
-- (CGFloat)widthForFont:(UIFont *)font
-                 height:(CGFloat)height;
+- (CGFloat)widthForFont:(UIFont *)font;
 
 /**
  *  时间戳转换成date

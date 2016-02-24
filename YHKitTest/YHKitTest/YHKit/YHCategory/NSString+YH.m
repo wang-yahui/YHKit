@@ -87,44 +87,21 @@
     return [cardTest evaluateWithObject:self];
 }
 
-- (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode {
-    CGSize result;
-    if (!font) font = [UIFont systemFontOfSize:12];
-    if ([self respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
-        NSMutableDictionary *attr = [NSMutableDictionary new];
-        attr[NSFontAttributeName] = font;
-        if (lineBreakMode != NSLineBreakByWordWrapping) {
-            NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
-            paragraphStyle.lineBreakMode = lineBreakMode;
-            attr[NSParagraphStyleAttributeName] = paragraphStyle;
-        }
-        CGRect rect = [self boundingRectWithSize:size
-                                         options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                      attributes:attr
-                                         context:nil];
-        result = rect.size;
-    } else {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        result = [self sizeWithFont:font constrainedToSize:size lineBreakMode:lineBreakMode];
-#pragma clang diagnostic pop
-    }
-    return result;
-}
-
 - (CGFloat)heightForFont:(UIFont *)font
                    width:(CGFloat)width {
-    CGSize size = [self sizeForFont:font
-                               size:CGSizeMake(width, MAXFLOAT)
-                               mode:NSLineBreakByWordWrapping];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 1)];
+    label.font = font;
+    label.text = self;
+    label.numberOfLines = 0;
+    CGSize size = [label sizeThatFits:CGSizeMake(width, MAXFLOAT)];
     return size.height;
 }
 
-- (CGFloat)widthForFont:(UIFont *)font
-                 height:(CGFloat)height {
-    CGSize size = [self sizeForFont:font
-                               size:CGSizeMake(MAXFLOAT, height)
-                               mode:NSLineBreakByWordWrapping];
+- (CGFloat)widthForFont:(UIFont *)font {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1, MAXFLOAT)];
+    label.font = font;
+    label.text = self;
+    CGSize size = [label sizeThatFits:CGSizeMake(FLT_MAX, FLT_MAX)];
     return size.width;
 }
 
@@ -134,7 +111,6 @@
 
 - (NSString *)dateStringWithFormatter:(NSString *)formatter {
     if (!self || [self isEqual:[NSNull null]] || !self.length) return @"";
-    
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:formatter];
     NSString *dateString = [format stringFromDate:[self date]];

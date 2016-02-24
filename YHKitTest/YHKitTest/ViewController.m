@@ -18,21 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 40)];
-    label.font = [UIFont systemFontOfSize:16];
-    label.text = @"王亚辉是个好人";
+    NSString *string = @"王亚辉是个好人卷帘大将来得及啊进来贷款换衣额李加大剂量的设计费节快乐减肥快来得及雷达及偶尔忽高忽低说两句按劳动法龙卷风IE哦那来得及阿奎了开始极度疯狂不好飞洛杉矶啊拉接触面埋藏在的飞机看的";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, [string widthForFont:H(15)], 20)];
+    label.font = [UIFont systemFontOfSize:15];
+    label.text = string;
     label.textColor = red_color;
     label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 0;
     label.backgroundColor = yellow_color;
     [self.view addSubview:label];
-    
-    [YHCache saveObject:[label snapshotImage] forKey:@"11"];
-    
-    NSLog(@"====%@", [YHCache readObjectForKey:@"11"]);
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, label.yhBottom+50, label.yhWidth, 40)];
-    imgView.backgroundColor = blue_color;
-    imgView.image = [YHCache readObjectForKey:@"11"];
-    [self.view addSubview:imgView];
 }
 
 @end
