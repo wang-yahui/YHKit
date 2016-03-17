@@ -27,6 +27,11 @@
     label.numberOfLines = 0;
     label.backgroundColor = yellow_color;
     [self.view addSubview:label];
+    
+    [MBProgressHUD show:@"正在加载" toView:self.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD showText:@"请登录后访问!" toView:self.view];
+    });
 }
 
 @end
