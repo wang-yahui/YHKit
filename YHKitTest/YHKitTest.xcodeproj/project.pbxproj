@@ -21,6 +21,7 @@
 		0974359A1C7B0E0500D4B466 /* UIAlertView+YH.m in Sources */ = {isa = PBXBuildFile; fileRef = 097435901C7B0E0500D4B466 /* UIAlertView+YH.m */; };
 		0974359B1C7B0E0500D4B466 /* UIColor+YH.m in Sources */ = {isa = PBXBuildFile; fileRef = 097435921C7B0E0500D4B466 /* UIColor+YH.m */; };
 		0974359C1C7B0E0500D4B466 /* UIView+YH.m in Sources */ = {isa = PBXBuildFile; fileRef = 097435941C7B0E0500D4B466 /* UIView+YH.m */; };
+		0989B8751CD8A790000D9E41 /* YHTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0989B8741CD8A790000D9E41 /* YHTimerView.m */; };
 		E275391154EF879BED2F3802 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0981CBB8355087D28BA222E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		097435931C7B0E0500D4B466 /* UIView+YH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YH.h"; sourceTree = "<group>"; };
 		097435941C7B0E0500D4B466 /* UIView+YH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YH.m"; sourceTree = "<group>"; };
 		097435951C7B0E0500D4B466 /* YHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHKit.h; sourceTree = "<group>"; };
+		0989B8731CD8A790000D9E41 /* YHTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTimerView.h; sourceTree = "<group>"; };
+		0989B8741CD8A790000D9E41 /* YHTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTimerView.m; sourceTree = "<group>"; };
 		0995D5D81C7C63300082F333 /* YHMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMacro.h; sourceTree = "<group>"; };
 		14D906F4CB3ACC8FC33F365F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		390887B929BC94D7DC378247 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 			children = (
 				097435951C7B0E0500D4B466 /* YHKit.h */,
 				0995D5D81C7C63300082F333 /* YHMacro.h */,
+				0989B8721CD8A790000D9E41 /* YHTimerView */,
 				097435851C7B0E0500D4B466 /* YHCache */,
 				097435881C7B0E0500D4B466 /* YHCategory */,
 			);
@@ -152,6 +156,15 @@
 				0956C2BD1C9A4E89008EE180 /* MBProgressHUD+YH.m */,
 			);
 			path = YHCategory;
+			sourceTree = "<group>";
+		};
+		0989B8721CD8A790000D9E41 /* YHTimerView */ = {
+			isa = PBXGroup;
+			children = (
+				0989B8731CD8A790000D9E41 /* YHTimerView.h */,
+				0989B8741CD8A790000D9E41 /* YHTimerView.m */,
+			);
+			path = YHTimerView;
 			sourceTree = "<group>";
 		};
 		7D4EBA3FB044AC4AFAF07827 /* Frameworks */ = {
@@ -293,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0974359A1C7B0E0500D4B466 /* UIAlertView+YH.m in Sources */,
+				0989B8751CD8A790000D9E41 /* YHTimerView.m in Sources */,
 				0956C2BE1C9A4E89008EE180 /* MBProgressHUD+YH.m in Sources */,
 				097435751C7B0DDD00D4B466 /* ViewController.m in Sources */,
 				097435961C7B0E0500D4B466 /* YHCache.m in Sources */,
