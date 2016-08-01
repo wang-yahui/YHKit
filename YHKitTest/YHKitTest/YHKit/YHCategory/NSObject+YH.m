@@ -33,38 +33,51 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if ([self init]) {
         unsigned int count = 0;
-        //获取所有成员变量
-        Ivar *ivars = class_copyIvarList([self class], &count);
+        //获取所有属性
+        objc_property_t *propertys = class_copyPropertyList([self class], &count);
         for (int i = 0; i < count; i++) {
-            //取出 i 位置对应的成员变量
-            Ivar ivar = ivars[i];
-            //查看成员变量
-            const char *name = ivar_getName(ivar);
+            //查看属性
+            const char *name = property_getName(propertys[i]);
             //归档
             NSString *key = [NSString stringWithUTF8String:name];
             id value = [aDecoder decodeObjectForKey:key];
             [self setValue:value forKey:key];
         }
-        free(ivars);
+        free(propertys);
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     unsigned int count = 0;
-    //获取所有成员变量
-    Ivar *ivars = class_copyIvarList([self class], &count);
+    //获取所有属性
+    objc_property_t *propertys = class_copyPropertyList([self class], &count);
     for (int i = 0; i < count; i++) {
-        //取出 i 位置对应的成员变量
-        Ivar ivar = ivars[i];
-        //查看成员变量
-        const char *name = ivar_getName(ivar);
+        //查看属性
+        const char *name = property_getName(propertys[i]);
         //归档
         NSString *key = [NSString stringWithUTF8String:name];
         id value = [self valueForKey:key];
         [aCoder encodeObject:value forKey:key];
     }
-    free(ivars);
+    free(propertys);
+}
+
+- (NSString *)description {
+    NSString *string = [NSString stringWithFormat:@"\n%@:{\n", [self className]];
+    
+    unsigned int count = 0;
+    //获取所有成员变量
+    objc_property_t *propertys = class_copyPropertyList([self class], &count);
+    for (int i = 0; i < count; i++) {
+        //查看属性
+        const char *name = property_getName(propertys[i]);
+        NSString *key = [NSString stringWithUTF8String:name];
+        id value = [self valueForKey:key];
+        string = [string stringByAppendingString:[NSString stringWithFormat:@"  %@ = %@\n", key, value]];
+    }
+    string = [string stringByAppendingString:@"}\n"];
+    return string;
 }
 
 @end
