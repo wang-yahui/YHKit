@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YHKit.h"
+#import "MyModel.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,18 @@
     [self.view addSubview:timerView];
     
     timerView.countDownTime = 795;
+    
+    
+    MyModel *model = [[MyModel alloc] init];
+    model.avatar = @"http://touxiang.png";
+    model.name = @"wangyahui";
+    model.mobile = @"18710971056";
+    model.email = @"461665472@qq.com";
+    model.quotaNum = 23;
+
+    [YHCache saveObject:model forKey:@"cache"];
+    MyModel *file = [YHCache readObjectForKey:@"cache"];
+    NSLog(@"%@", file);
 }
 
 @end

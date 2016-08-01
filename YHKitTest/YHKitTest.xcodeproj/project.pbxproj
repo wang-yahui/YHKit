@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0956C2BE1C9A4E89008EE180 /* MBProgressHUD+YH.m in Sources */ = {isa = PBXBuildFile; fileRef = 0956C2BD1C9A4E89008EE180 /* MBProgressHUD+YH.m */; };
+		096EC5341D4F519900C3BBB1 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EC5331D4F519900C3BBB1 /* MyModel.m */; };
 		0974356F1C7B0DDD00D4B466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0974356E1C7B0DDD00D4B466 /* main.m */; };
 		097435721C7B0DDD00D4B466 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097435711C7B0DDD00D4B466 /* AppDelegate.m */; };
 		097435751C7B0DDD00D4B466 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097435741C7B0DDD00D4B466 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		0956C2BC1C9A4E89008EE180 /* MBProgressHUD+YH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YH.h"; sourceTree = "<group>"; };
 		0956C2BD1C9A4E89008EE180 /* MBProgressHUD+YH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YH.m"; sourceTree = "<group>"; };
+		096EC5321D4F519900C3BBB1 /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		096EC5331D4F519900C3BBB1 /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 		0974356A1C7B0DDD00D4B466 /* YHKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0974356E1C7B0DDD00D4B466 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		097435701C7B0DDD00D4B466 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				097435841C7B0E0500D4B466 /* YHKit */,
 				097435701C7B0DDD00D4B466 /* AppDelegate.h */,
 				097435711C7B0DDD00D4B466 /* AppDelegate.m */,
+				096EC5321D4F519900C3BBB1 /* MyModel.h */,
+				096EC5331D4F519900C3BBB1 /* MyModel.m */,
 				097435731C7B0DDD00D4B466 /* ViewController.h */,
 				097435741C7B0DDD00D4B466 /* ViewController.m */,
 				097435761C7B0DDD00D4B466 /* Main.storyboard */,
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096EC5341D4F519900C3BBB1 /* MyModel.m in Sources */,
 				0974359A1C7B0E0500D4B466 /* UIAlertView+YH.m in Sources */,
 				0989B8751CD8A790000D9E41 /* YHTimerView.m in Sources */,
 				0956C2BE1C9A4E89008EE180 /* MBProgressHUD+YH.m in Sources */,
