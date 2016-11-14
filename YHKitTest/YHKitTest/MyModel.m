@@ -7,7 +7,6 @@
 //
 
 #import "MyModel.h"
-#import <objc/runtime.h>
 
 @implementation MyModel
 

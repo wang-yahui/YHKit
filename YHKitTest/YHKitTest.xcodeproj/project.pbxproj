@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0923AF9B1DD9728200A1EAB8 /* UIImage+YH.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923AF9A1DD9728200A1EAB8 /* UIImage+YH.m */; };
 		0956C2BE1C9A4E89008EE180 /* MBProgressHUD+YH.m in Sources */ = {isa = PBXBuildFile; fileRef = 0956C2BD1C9A4E89008EE180 /* MBProgressHUD+YH.m */; };
 		096EC5341D4F519900C3BBB1 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EC5331D4F519900C3BBB1 /* MyModel.m */; };
 		0974356F1C7B0DDD00D4B466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0974356E1C7B0DDD00D4B466 /* main.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0923AF991DD9728200A1EAB8 /* UIImage+YH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YH.h"; sourceTree = "<group>"; };
+		0923AF9A1DD9728200A1EAB8 /* UIImage+YH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YH.m"; sourceTree = "<group>"; };
 		0956C2BC1C9A4E89008EE180 /* MBProgressHUD+YH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YH.h"; sourceTree = "<group>"; };
 		0956C2BD1C9A4E89008EE180 /* MBProgressHUD+YH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YH.m"; sourceTree = "<group>"; };
 		096EC5321D4F519900C3BBB1 /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				097435941C7B0E0500D4B466 /* UIView+YH.m */,
 				0956C2BC1C9A4E89008EE180 /* MBProgressHUD+YH.h */,
 				0956C2BD1C9A4E89008EE180 /* MBProgressHUD+YH.m */,
+				0923AF991DD9728200A1EAB8 /* UIImage+YH.h */,
+				0923AF9A1DD9728200A1EAB8 /* UIImage+YH.m */,
 			);
 			path = YHCategory;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0923AF9B1DD9728200A1EAB8 /* UIImage+YH.m in Sources */,
 				096EC5341D4F519900C3BBB1 /* MyModel.m in Sources */,
 				0974359A1C7B0E0500D4B466 /* UIAlertView+YH.m in Sources */,
 				0989B8751CD8A790000D9E41 /* YHTimerView.m in Sources */,
